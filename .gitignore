@@ -485,3 +485,6 @@ $RECYCLE.BIN/
 
 # OpenDAoC
 /Pathing/Detour/Build
+
+# Scratch files
+/.scratch/
