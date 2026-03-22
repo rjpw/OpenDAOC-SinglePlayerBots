@@ -293,7 +293,10 @@ namespace DOL.GS
         {
             if(beadTemplate == null)
                 beadTemplate = GameServer.Database.FindObjectByKey<DbItemTemplate>("Bead_Of_Regeneration");
-            
+
+            if(beadTemplate == null)
+                return null;
+
             DbItemUnique item = new DbItemUnique(beadTemplate);
             
             return item;
