@@ -2900,6 +2900,7 @@ namespace DOL.GS
                     // If a mimic got the kill, resolve to the group's player leader for loot purposes
                     if (killer is MimicNPC mimic && mimic.Group?.LivingLeader is GamePlayer playerLeader)
                         killer = playerLeader;
+                    if (log.IsDebugEnabled) log.Debug($"[LOOT DEBUG] {Name} killed by {killer?.Name} ({killer?.GetType().Name}), IsWorthReward={IsWorthReward}");
                     Diagnostics.StartPerfCounter($"ReaperService-NPC-ProcessDeath-DropLoot-NPC({hashCode})");
 
                     if (IsWorthReward)
